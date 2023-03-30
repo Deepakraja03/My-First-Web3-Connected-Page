@@ -1,53 +1,91 @@
-/* Center the buttons */
+/* App container */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Button styles */
 button {
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Style the modal content */
-  .Modal {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 400px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  /* Style the modal title */
-  .Modal h2 {
-    margin-top: 0;
-  }
-  
-  /* Style the form fields */
-  .Modal label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .Modal input,
-  .Modal textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 5px;
-  }
-  
-  /* Style the close button */
-  .Modal .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: bold;
-    background-color: transparent;
-    border: none;
-    outline: none;
-  }
-  
-  .Modal .close-btn:hover {
-    color: #f00;
-  }
-  
+  padding: 10px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Modal styles */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"] {
+  align-self: flex-end;
+}
+
+button[aria-label="close"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333;
+}
+
+button[aria-label="close"]:hover {
+  color: #000;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: green;
+  margin: 10px 0;
+}
