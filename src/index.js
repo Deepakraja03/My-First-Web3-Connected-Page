@@ -9,7 +9,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.use("/api/product", product);
+app.use("/App", product);
 app.listen(PORT, () => console.log(`Server is running in port ${PORT}`));
 
 createRoot(document.getElementById("root")).render(<App />);
